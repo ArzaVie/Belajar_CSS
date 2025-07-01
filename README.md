@@ -1,1 +1,2 @@
-<h1>Hi, Repositori ini berisi kumpulan catatan, contoh kode, dan praktik terbaik (best practices) yang saya pelajari selama mendalami CSS, mulai dari konsep dasar hingga teknik-teknik lanjutan. Tujuannya adalah sebagai referensi pribadi dan sumber belajar bagi siapa saja yang tertarik dengan CSS.</h1>
+<h1>Hi</h1>
+<p>Repositori ini berisi kumpulan catatan, contoh kode, dan praktik terbaik (best practices) yang saya pelajari selama mendalami CSS, mulai dari konsep dasar hingga teknik-teknik lanjutan. Tujuannya adalah sebagai referensi pribadi dan sumber belajar bagi siapa saja yang tertarik dengan CSS.</p>
