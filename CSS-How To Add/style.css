@@ -1,0 +1,55 @@
+body {
+    background: lemonchiffon;
+    font-family: poppins;
+    font-size: 20px;
+}
+
+.gallery-container {
+  display: flex; /* Mengaktifkan Flexbox */
+  justify-content: center; /* Memusatkan gambar secara horizontal */
+  align-items: flex-start; /* Meratakan item ke atas (penting jika tinggi caption berbeda) */
+  gap: 20px; /* Memberi jarak antar gambar */
+  flex-wrap: wrap; /* Penting untuk responsivitas: memungkinkan gambar turun ke baris baru jika layar sempit */
+  margin-bottom: 20px; /* Jarak bawah kontainer */
+}
+
+figure {
+  flex: 1; /* Membuat setiap figure memiliki lebar yang fleksibel */
+  min-width: 300px; /* Batasan lebar minimum agar tidak terlalu kecil */
+  margin: 0; /* Menghilangkan margin default dari figure */
+  text-align: center; /* Memusatkan gambar dan teks di dalam figure */
+  border: 1px solid #ddd; /* Tambahkan border jika perlu */
+  padding: 10px;
+  box-sizing: border-box; /* Agar padding tidak menambah ukuran total */
+}
+
+figure img {
+  max-width: 100%; /* Membuat gambar responsif */
+  height: auto; /* Mempertahankan rasio aspek gambar */
+  display: block; /* Menghilangkan spasi ekstra di bawah gambar */
+  margin: 0 auto 10px auto; /* Memusatkan gambar dan memberi jarak bawah */
+}
+
+figcaption {
+  font-size: 0.9em;
+  /* color: #666; */
+  padding: 5px 0;
+}
+
+/* Responsivitas dasar untuk layar sangat kecil */
+@media (max-width: 600px) {
+  .gallery-container {
+    flex-direction: column; /* Mengubah arah menjadi kolom di layar kecil */
+    align-items: center; /* Memusatkan item di tengah */
+  }
+  figure {
+    width: 90%; /* Memberikan lebar yang lebih spesifik untuk layar kecil */
+  }
+}
+/* img{
+    max-width: 100%;
+    height: 150px;
+    display: block;
+    margin: 0 auto;
+
+} */
