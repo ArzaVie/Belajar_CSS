@@ -1,0 +1,34 @@
+body{
+    background-color: lemonchiffon;
+    font-size: 20px;
+    font-family: poppins;
+}
+
+h1{
+    text-align: center;
+    font-size: 50px;
+}
+
+.container {
+    display: flex; /* Menggunakan Flexbox untuk mensejajarkan gambar */
+    justify-content: center; /* Memusatkan gambar secara horizontal */
+    gap: 20px; /* Jarak antara kedua gambar */
+  }
+
+  .image-item {
+    text-align: center; /* Memusatkan teks caption di bawah gambar */
+  }
+
+  .image-item img {
+    max-width: auto; /* Memastikan gambar tidak melebihi lebar kontainernya */
+    height: auto; /* Mempertahankan rasio aspek gambar */
+    width: 600px;
+    /* border: 1px solid #ddd; Contoh border */
+    padding: 5px; /* Contoh padding */
+  }
+
+  .caption {
+    margin-top: 10px; /* Jarak antara gambar dan caption */
+    font-size: 14px;
+    color: #555;
+  }

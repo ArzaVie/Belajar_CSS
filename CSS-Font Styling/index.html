@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Font Styling</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <h1><u>Font Styling</u></h1>
+    <p>
+        🎨 Tipografi adalah elemen krusial dalam desain web; ia tidak hanya memengaruhi estetika, tetapi juga keterbacaan dan pengalaman pengguna (UX) secara keseluruhan. CSS memungkinkan kita untuk sepenuhnya mengontrol bagaimana teks ditampilkan di halaman web, mengubahnya dari sekadar kumpulan kata menjadi bagian integral dari identitas visual.
+    </p>
+
+    <h2><u>Apa itu Font-Styling??</u></h2>
+    <p>Font styling di CSS adalah proses menggunakan berbagai properti CSS untuk mengatur tampilan dan karakteristik teks pada halaman web. Ini mencakup segala hal mulai dari jenis huruf, ukurannya, ketebalannya, hingga jarak antar baris dan kata. Tujuannya adalah untuk membuat teks tidak hanya menarik secara visual tetapi juga mudah dibaca, intuitif, dan sesuai dengan branding situs. Dengan CSS, kita dapat mencapai hirarki visual yang jelas, memandu mata pengguna melalui konten, dan menciptakan pengalaman membaca yang nyaman di berbagai perangkat.</p>
+
+    <h2><u>Properti CSS untuk Font Styling dan Fungsinya</u></h2>
+    <p>Berikut adalah properti-properti CSS utama yang digunakan untuk mengatur gaya font, beserta fungsi dan contoh kodenya:</p>
+
+    <dl>
+        <dt><b>1. Font Family (Jenis Huruf)</b></dt>
+        <figure style="display: block; margin: 0 auto; text-align: center;">
+    <img src="/img/font-family.jpg" alt="">
+    <figcaption style="display: block; padding:10px; text-align: center; font-weight: bold;">Code Font Family</figcaption>
+</figure>
+        <dd><b>font-family</b> adalah properti CSS yang digunakan untuk menentukan jenis huruf (font) yang akan ditampilkan pada teks di halaman web, fungsinya untuk Mengontrol karakter visual dari huruf itu sendiri. Kita bisa menuliskan satu atau beberapa nama font. Jika font yang pertama tidak tersedia di komputer pengguna, browser akan mencoba menggunakan font berikutnya dalam daftar tersebut. Inilah yang disebut sebagai <i>fallback font</i> (font cadangan yang akan digunakan jika font utama tidak ditemukan).</dd>
+        <br>
+
+        <dt><b>2. Font Size (Ukuran Font)</b></dt>
+        <figure style="display: block; margin: 0 auto; text-align: center;">
+            <img src="" alt="">
+            <figcaption style="display: block; padding:10px; text-align: center; font-weight: bold;"></figcaption>
+        </figure>
+        <dd><b>Font-size</b> digunakan untuk <b>mengatur seberapa besar atau kecil teks</b> ditampilkan di halaman web. Ukuran ini sangat penting untuk memastikan teks mudah dibaca, terutama pada berbagai perangkat (responsif) dan untuk pengguna dengan kebutuhan aksesibilitas khusus. <b>Fungsi Utama</b>
+font-size mengontrol skala visual teks, yang berdampak pada estetika, hirarki informasi, dan keterbacaan. Pemilihan satuan yang tepat sangat mempengaruhi desain responsif dan kenyamanan pengguna.
+        </dd>
+        <h4>Jenis Nilai yang Bisa Digunakan:</h4>
+        <p>Berikut penjelasan lebih detail tentang jenis nilai pada properti font-size di CSS, yang dibagi menjadi dua kelompok utama: <b>nilai absolut</b> dan <b>nilai relatif</b>.</p>
+        <ol>
+            <li><b>Nilai Absolut</b></li>
+            <dd>Nilai absolut menghasilkan ukuran huruf tetap yang tidak berubah, meskipun ukuran layar atau pengaturan zoom browser berubah. Cocok digunakan untuk kontrol penuh atas ukuran teks, tetapi tidak responsif dan kurang baik untuk aksesibilitas.</dd>
+            <table style="text-align: center; margin: 0 auto; margin-top: 10px; margin-bottom: 10px;" border="1" cellspacing="0" cellpadding="5">
+                <thead style="background-color: #97B067;">
+                    <th>Satuan</th>
+                    <th>Keterangan</th>
+                </thead>
+                <tbody>
+                     <tr>
+                        <td>px (pixel)</td>
+                        <td>Ukuran berdasarkan titik di layar. <b>1px = 1</b> titik perangkat (biasanya). Misal: <b>font-size: 16px;</b> akan selalu terlihat <b>16px</b>, di semua perangkat.</td>
+                    </tr>
+                     <tr>
+                        <td>pt (point)</td>
+                        <td>Digunakan dalam dunia cetak. <b>1pt = 1/72 inci.</b> Jarang digunakan untuk tampilan layar. Misal: font-size: 12pt;</td>
+                     </tr>
+                     <tr>
+                        <td>in, cm, mm</td>
+                        <td>Ukuran dalam <b>inci, sentimeter, milimeter.</b> Tidak umum digunakan dalam web karena kurang fleksibel dan tidak responsif.</td>
+                     </tr>
+                </tbody>
+            </table>
+            <br>
+            <li><b>Nilai Relatif</b></li>
+            <dd>Nilai ini menyesuaikan ukuran huruf berdasarkan konteks atau elemen lain, membuat desain lebih fleksibel dan responsif. Direkomendasikan untuk web modern.</dd>
+            <table style="text-align: center; margin: 0 auto; margin-top: 10px; margin-bottom: 10px;" border="1" cellspacing="0" cellpadding="5">
+                <thead style="background-color: #97B067;">
+                    <th>Satuan</th>
+                    <th>Pengertian</th>
+                    <th>Relatif Terhadap</th>
+                    <th>Keterangan</th>
+                </thead>
+                <tbody>
+                     <tr>
+                        <td><b>em (em square)</b></td>
+                        <td>Satuan tipografi yang mewakili ukuran font induk (parent). Nama "em" berasal dari lebar huruf "M" dalam ukuran font tersebut.</td>
+                        <td>Ukuran font elemen induk (parent)</td>
+                        <td>Misalnya, jika parent memiliki font-size: 16px;, maka 1em = 16px. Jadi, font-size: 2em; = 32px. Bersifat turunan (cascading) dan bisa "membesar terus" jika bertingkat.</td>
+                    </tr>
+                     <tr>
+                        <td><b>rem (root em)</b></td>
+                        <td>Sama seperti em, tetapi relatif terhadap elemen root (<html>), bukan parent. “rem” berarti “root em”.</td>
+                        <td>Ukuran font elemen root (html)</td>
+                        <td>Tidak dipengaruhi oleh parent. Lebih stabil dan konsisten. Jika <html> = 16px, maka 1rem = 16px. Contoh: font-size: 1.5rem; = 24px.</td>
+                    </tr>
+                     <tr>
+                        <td><b>% (percent)</b></td>
+                        <td>Persentase dari ukuran font induk (parent). Contoh: 120% berarti 1.2 kali ukuran font dari parent-nya.</td>
+                        <td>Ukuran font elemen induk</td>
+                        <td>100% = ukuran font induk. 120% = 1.2 kali font induk.</td>
+                    </tr>
+                     <tr>
+                        <td><b>vw (Viewport Width)</b></td>
+                        <td>Persentase dari lebar tampilan browser (viewport). 1vw = 1% dari lebar layar.</td>
+                        <td>1% dari lebar viewport (layar)</td>
+                        <td>Contoh: font-size: 5vw; = 5% dari lebar layar. Ukuran teks akan menyesuaikan ukuran layar. Sangat berguna untuk desain fluid/responsif.</td>
+                    </tr>
+                     <tr>
+                        <td><b>vh (Viewport Height)</b></td>
+                        <td>Persentase dari tinggi viewport (layar aktif). 1vh = 1% dari tinggi layar.</td>
+                        <td>1% dari tinggi viewport</td>
+                        <td>Sama seperti vw, tetapi berdasarkan tinggi layar. Jarang dipakai untuk font, tapi bisa dipakai untuk efek desain khusus.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </ol>
+
+        <ul>
+            <h4><u>Rekomendasi Praktis</u></h4>
+            <li>Gunakan <b>rem</b> untuk konsistensi dan aksesibilitas.</li>
+            <li>Gunakan <b>em</b> jika ingin ukuran mengikuti parent secara dinamis.</li>
+            <li>Gunakan <b>vw/vh</b> hanya jika ingin teks berskala dengan ukuran layar.</li>
+            <li>Hindari penggunaan <b>px</b> secara berlebihan karena tidak responsif.</li>
+        </ul>
+        <br>
+
+        <dt><b>3. Font Style (Gaya Huruf)</b></dt>
+        <figure style="display: block; margin: 0 auto; text-align: center;">
+    <img src="#" alt="">
+    <figcaption style="display: block; padding:10px; text-align: center; font-weight: bold;"></figcaption>
+</figure>
+        <dd><b>font-style</b> digunakan untuk mengatur gaya huruf miring atau normal pada teks. Umumnya dipakai untuk memberikan penekanan visual atau penegasan pada kata/kalimat, seperti istilah asing, kutipan, atau judul.Fungsi utamanya adalah Memberi penekanan visual pada teks penting, Membantu menandai istilah asing, nama ilmiah, kutipan, dll, dan Meningkatkan estetika dan hirarki visual dalam konten.</dd>
+        <table style="text-align: center; margin: 0 auto; margin-top: 10px; margin-bottom: 10px;" border="1" cellspacing="0" cellpadding="5">
+            <ol><h4>Nilai yang Dapat Digunakan:</h4></ol>
+        <thead style="background-color: #97B067;">
+                <th>Nilai</th>
+                <th>Penjelasan</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td><b>Normal</b></td>
+                <td>Gaya default, teks ditampilkan tanpa kemiringan.</td>
+            </tr>
+            <tr>
+                <td><b>italic</b></td>
+                <td>Menampilkan teks dengan gaya miring yang resmi (jika font memiliki versi italic). Ini adalah pilihan paling umum untuk membuat teks miring.</td>
+            </tr>
+            <tr>
+                <td><b>oblique</b></td>
+                <td>Teks dimiringkan secara artifisial (oleh browser), bukan dari desain font aslinya. Hasilnya mirip dengan italic, tapi biasanya kurang presisi.</td>
+            </tr>
+        </tbody>
+        </table>
+        <br>
+
+        <dt><b>4. Font Weight (Ketebalan Huruf)</b></dt>
+        <figure style="display: block; margin: 0 auto; text-align: center;">
+    <img src="#" alt="">
+    <figcaption style="display: block; padding:10px; text-align: center; font-weight: bold;"></figcaption>
+</figure>
+        <dd><b>font-weight</b> digunakan untuk <b>mengatur ketebalan huruf</b> atau yang biasa disebut dengan <i>boldness</i>. Ini berguna untuk <b>menonjolkan bagian tertentu</b> dari teks dan menciptakan hirarki visual dalam desain web, seperti judul, subjudul, atau penekanan kata.</dd>
+        <table style="text-align: center; margin: 0 auto; margin-top: 10px; margin-bottom: 10px;" border="1" cellspacing="0" cellpadding="5">
+            <ol><h4>A. Nilai Kunci:</h4></ol>
+        <thead style="background-color: #97B067;">
+                <th>Nilai</th>
+                <th>Penjelasan</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td><b>Normal</b></td>
+                <td>Berat standar teks. Setara dengan <b>400</b>.</td>
+            </tr>
+            <tr>
+                <td><b>bold</b></td>
+                <td>Lebih tebal dari normal. Setara dengan <b>700.</b></td>
+            </tr>
+            <tr>
+                <td><b>lighter</b></td>
+                <td>Lebih tipis dari elemen induk (parent).</td>
+            </tr>
+            <tr>
+                <td><b>bolder</b></td>
+                <td>Lebih tebal dari elemen induk (parent).</td>
+            </tr>
+        </tbody>
+        </table>
+        <ol><h4>B. Nilai Angka (Numeric) – 100 sampai 900</h4></ol>
+        <figure style="display: block; margin: 0 auto; text-align: center;">
+    <img src="/img/font-wg.jpg" alt="">
+    <figcaption style="display: block; padding:10px; text-align: center; font-weight: bold;"></figcaption>
+</figure>
+<br>
+
+    <dt><b>5. Line-Height  (Jarak Antar Baris Teks)</b></dt>
+        <figure style="display: block; margin: 0 auto; text-align: center;">
+    <img src="#" alt="">
+    <figcaption style="display: block; padding:10px; text-align: center; font-weight: bold;"></figcaption>
+</figure>
+        <dd><b>Line-Height</b> digunakan untuk mengatur jarak vertikal antara baris-baris teks dalam sebuah blok. Ini sangat penting dalam desain web karena memengaruhi keterbacaan dan kenyamanan membaca teks, terutama pada paragraf yang panjang.</dd>
+        <table style="text-align: center; margin: 0 auto; margin-top: 10px; margin-bottom: 10px;" border="1" cellspacing="0" cellpadding="5">
+            <ol><h4>A. Nilai Kunci:</h4></ol>
+        <thead style="background-color: #97B067;">
+                <th>Jenis Nilai</th>
+                <th>Contoh</th>
+                <th>Penjelasan</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td><b> Angka tanpa satuan	</b></td>
+                <td>line-height: 1.5;</td>
+                <td>Relatif terhadap font-size elemen. Misalnya, jika font-size: 16px, maka line-height: 1.5 berarti 24px. Ini adalah cara paling fleksibel dan direkomendasikan, karena berskala otomatis dengan ukuran teks.</td>
+            </tr>
+            <tr>
+                <td><b>Panjang (dengan satuan)</b></td>
+                <td>line-height: 24px; atau 1.5em;</td>
+                <td>Jarak tetap, tidak berskala otomatis. Bisa digunakan, tapi kurang responsif jika ukuran font berubah.</td>
+            </tr>
+            <tr>
+                <td><b>normal</b></td>
+                <td>line-height: normal;</td>
+                <td>Nilai default dari browser, biasanya sekitar 1.0–1.2 kali font-size tergantung pada font yang digunakan. Tidak disarankan jika ingin kontrol penuh.</td>
+            </tr>
+        </tbody>
+        </table>
+        <br>
+
+        <dt><b>6. Letter-Spacing  (Jarak Antar Huruf)</b></dt>
+        <dd><b>letter-spacing</b> digunakan untuk mengatur jarak horizontal antara karakter atau huruf dalam teks. Properti ini sangat bermanfaat untuk mengatur kerapatan huruf, baik untuk tujuan estetika maupun meningkatkan keterbacaan pada tampilan web.</dd>
+        <figure style="display: block; margin: 0 auto; text-align: center;">
+    <img src="/img/leter-space.jpg" alt="">
+    <figcaption style="display: block; padding:10px; text-align: center; font-weight: bold;"></figcaption>
+</figure>
+
+        <dt><b>7. Word-Spacing  (Jarak Antar Kata)</b></dt>
+        <dd><b>word-spacing</b> digunakan untuk mengatur jarak horizontal antar kata dalam sebuah teks. Dengan kata lain, ini mengontrol seberapa renggang atau rapat kata-kata dalam satu baris.</dd>
+        <figure style="display: block; margin: 0 auto; text-align: center;">
+    <img src="/img/word-space.jpg" alt="">
+    <figcaption style="display: block; padding:10px; text-align: center; font-weight: bold;"></figcaption>
+</figure>
+<br>
+
+        <dt><b>8. Font Variant (Teks Kecil Kapital / Small Caps)</b></dt>
+        <figure style="display: block; margin: 0 auto; text-align: center;">
+    <img src="/img/font-variant.jpg" alt="">
+    <figcaption style="display: block; padding:10px; text-align: center; font-weight: bold;">Font-Vartiant</figcaption>
+    </figure>
+        <dd><b>font-variant</b> digunakan untuk mengubah <b>huruf kecil menjadi huruf kapital versi kecil (small caps)</b>, tanpa harus mengetikkan huruf kapital secara manual di HTML. Ini sangat berguna dalam desain tipografi profesional, terutama untuk <b>judul, subjudul, atau bagian formal</b> seperti nama penulis, referensi, dan kutipan.</dd>
+        <ul>
+            <li><h4>Nilai yang bisa digunakan:</h4></li>
+        </ul>
+        <figure style="display: block; margin: 0 auto; text-align: center;">
+    <img src="/img/font-variant2.jpg" alt="">
+    </figure>
+    <br>
+
+        <dt><b>9. Text TransForm (Mengubah Kapitalisasi Teks)</b></dt>
+        <figure style="display: block; margin: 0 auto; text-align: center;">
+    <img src="" alt="">
+    <figcaption style="display: block; padding:10px; text-align: center; font-weight: bold;"></figcaption>
+    </figure>
+        <dd><b>text-transform</b> digunakan untuk mengubah huruf besar dan kecil pada teks secara visual, tanpa harus mengubah konten HTML-nya. Ini sangat berguna untuk presentasi atau gaya tampilan, terutama untuk judul, tombol, atau daftar.</dd>
+        <ul>
+            <li><h4>Nilai yang bisa digunakan:</h4></li>
+        </ul>
+        <figure style="display: block; margin: 0 auto; text-align: center;">
+    <img src="/img/text-transform.jpg" alt="">
+    </figure>
+    <br>
+
+        <dt><b>10. Text Decoration (Dekorasi Teks)</b></dt>
+        <figure style="display: block; margin: 0 auto; text-align: center;">
+    <img src="" alt="">
+    <figcaption style="display: block; padding:10px; text-align: center; font-weight: bold;"></figcaption>
+    </figure>
+        <dd><b>text-decoration</b> digunakan untuk menambahkan atau menghapus garis dekoratif pada teks, seperti garis bawah (underline), garis atas (overline), atau garis coret (line-through). Properti ini sering digunakan dalam hyperlink, judul, atau teks yang memerlukan penekanan visual.</dd>
+        <ul>
+            <li><h4>Nilai yang bisa digunakan:</h4></li>
+        </ul>
+        <figure style="display: block; margin: 0 auto; text-align: center;">
+    <img src="/img/text-decor.jpg" alt="">
+    </figure>
+    <br>
+
+    <h1><u>Font ShortHand</u></h1>
+
+    <div class="container">
+    <div class="image-item">
+      <img src="/img/before-shorthand.jpg" alt="Deskripsi Gambar 1" width="300">
+      <p class="caption">Before Font Shorthand</p>
+    </div>
+    <div class="image-item">
+      <img src="/img/after-shorthand.jpg" alt="Deskripsi Gambar 2" width="300">
+      <p class="caption">After Font Shorthand</p>
+    </div>
+  </div>
+
+    <p><b>font shorthand</b> adalah cara menuliskan beberapa pengaturan font sekaligus dalam satu baris kode CSS. Ini membuat kode jadi lebih ringkas dan mudah dibaca, daripada menulis setiap properti satu per satu.</p>
+    <ul>
+        <h3>Apa saja yang bisa digabungkan??</h3>
+        <li>font-style</li>
+        <li>font-variant</li>
+        <li>font-weight</li>
+        <li>font-size</li>
+        <li>line-height</li>
+        <li>font-family</li>
+
+        <h3>Aturan Pakai :</h3>
+        <li>font-size dan font-family wajib ada.</li>
+        <li>Jika pakai line-height, harus langsung setelah font-size pakai garis miring /.</li>
+        <li>Urutan properti lainnya boleh fleksibel, tapi disarankan:
+font-style → font-variant → font-weight → font-size/line-height → font-family</li>
+    </ul>
+    </dl>
+
+    <h3 style="text-align: center;"><b>Next Course → </b> <a href="/CSS-Text Styling/index.html">Teks Styling</a></h3>
+    <h3 style="text-align: center;""><b>Previous Course → </b> <a href="/CSS-How To Use/index.html">How To Use CSS</a><h3>
+</body>
+</html>
