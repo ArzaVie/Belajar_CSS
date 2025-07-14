@@ -9,6 +9,10 @@ h1{
     font-size: 50px;
 }
 
+a{
+  text-decoration: none;
+}
+
 .container {
     display: flex; /* Menggunakan Flexbox untuk mensejajarkan gambar */
     justify-content: center; /* Memusatkan gambar secara horizontal */

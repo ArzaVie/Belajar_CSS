@@ -4,6 +4,10 @@ body {
     font-size: 20px;
 }
 
+a{
+  text-decoration: none;
+}
+
 .gallery-container {
   display: flex; /* Mengaktifkan Flexbox */
   justify-content: center; /* Memusatkan gambar secara horizontal */
